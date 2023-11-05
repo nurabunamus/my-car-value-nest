@@ -35,6 +35,8 @@ export class UsersController {
   //   this.usersService.update(body.email, body.password);
   // }
 
-    // @Delete('/:id')
-    // removeUser() {}
+  @Delete('/:id')
+  removeUser(@Param('id') id: string) {
+    return this.usersService.remove(parseInt(id));
+  }
 }
